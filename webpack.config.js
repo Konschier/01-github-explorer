@@ -13,7 +13,7 @@ module.exports = {
         filename: "bundle.js",
     },
     resolve: {
-        extensions: [".js", ".jsx", "ts", "tsx"],
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
     },
     devServer: {
         contentBase: path.resolve(__dirname, "public"),
@@ -27,7 +27,7 @@ module.exports = {
     ].filter(Boolean),
     module: {
         rules: [{
-                test: /\.(j|t)sx$/,
+                test: /\.(t|j)sx$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
